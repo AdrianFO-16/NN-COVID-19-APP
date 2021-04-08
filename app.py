@@ -50,13 +50,13 @@ col1, col2, col3 = st.beta_columns([0.25,0.15, 0.60])
 with col1:
     st.markdown("<h2 style='text-align: center; color: black; font-family: verdana;'>Características del individuo</h2>", unsafe_allow_html=True)        
     sexo = st.radio("Sexo", ("Hombre", "Mujer")) == "Hombre"
-    edad = st.number_input("Edad", min_value = 0, max_value = 105, step =  1)/105
+    edad = st.number_input("Edad", min_value = 1, max_value = 105, step =  1)/105
     indigena = int(st.checkbox("Origen Indígena"))
     condiciones = st.multiselect("Condiciones", list_condiciones)
     dias_sint = st.number_input("Días con síntomas", min_value=0 , max_value= 15, step = 1)/15    
       
 with col3:
-    st.markdown("<h2 style='text-align: center; color: black; font-family: verdana;'>Probabilidad Resultante</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: black; font-family: verdana;'>Probabilidad de defunción</h2>", unsafe_allow_html=True)
     riesgo = st.empty()
 
 actual_condiciones = []
