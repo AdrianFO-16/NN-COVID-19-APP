@@ -72,7 +72,7 @@ aborda el desarrollo de una herramienta informativa para predecir la probabilida
 la persona como la edad, sexo y comorbilidades. Mediante el uso de técnicas de aprendizaje profundo se logra comprender la
 dinámica interna de los datos y ejecutar predicciones sin sesgos. El modelo generado, demostró ser estadísticamente más preciso
 que 5 algoritmos de machine learning bajo el test de McNemar, obteniendo una precisión promedio del 87.34 % σ= 0.04 para la 
-identificación de pacientes con riesgo en el lapso del 01 de agosto al 05 de septiembre del 2021..</p></pre>""", unsafe_allow_html = True)
+identificación de pacientes con riesgo en el lapso del 01 de agosto al 05 de septiembre del 2021.</p></pre>""", unsafe_allow_html = True)
 
 
     st.image("imgs/DescripcionFlujoNN.jpg")
