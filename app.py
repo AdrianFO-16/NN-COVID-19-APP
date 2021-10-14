@@ -61,20 +61,18 @@ if page == "Introducción":
 
         
     st.markdown("""<pre><p style='text-align: center; color: black; font-family: verdana;'>
-Durante el transcurso de la pandemia de COVID-19 en México se han alcanzado altos niveles de ocupación hospitalaria,
-lo cual ha obligado a médicos de primera línea a priorizar recursos, sin embargo, para llevar a acabo este proceso
-no existe un método sistemático más allá de la experiencia humana. Se han desarrollado herramientas para calcular
-el riesgo de mortalidad por COVID-19.Actualmente existen herramientas para calcular el riesgo de mortalidad por 
-COVID-19, sin embargo, una de las limitantes centrales está en el sesgo de los datos, ya que en nuestro país se
-cuenta con menos del 10% de casos mortales, motivo por el cual los algoritmos de aprendizaje de máquina
-tradicionales suelen tener desviaciones importantes y no siempre logran asignar predicciones de manera certera.
-
-El presente estudio aborda la creación de una herramienta para el cálculo del riesgo de mortalidad, con base
-en ciertos factores de riesgo como la edad, sexo y comorbilidades mediante el uso de técnicas de aprendizaje
-profundo, la cual logra comprender los patrones internos de los datos y ejecutar predicciones sin sesgos. La
-arquitectura generada, logró una precisión promedio del 89%. Dada la factibilidad y la facilidad de uso, este
-modelo tiene el potencial de ser utilizado tanto por hospitales para completar la decisión médica como por la
-población en general para conocer su riesgo y emprender mejores hábitos.</p></pre>""", unsafe_allow_html = True)
+Durante el transcurso de la pandemia de COVID-19, en México se han alcanzado altos niveles de ocupación hospitalaria,
+lo cual ha obligado a médicos de primera líınea a priorizar recursos, sin embargo, para llevar a cabo este proceso no existe
+un método sistemético más allá de la experiencia humana. A pesar de los avances en la vacunación, la aparición de nuevas
+variables como la Delta ha ocasionado un número elevado de contagios cuya tendencia cíclica se proyecta que continúe durante 
+el resto de 2021 y 2022. Actualmente existen herramientas para calcular el riesgo de mortalidad por COVID-19, sin embargo, una
+limitante central se encuentra en el sesgo de los datos, ya que solo el 7.6 % son casos de defunciones, por lo que los algoritmos
+de machine learning tradicionales suelen tener desviaciones y no asignar predicciones certeramente. El presente estudio
+aborda el desarrollo de una herramienta informativa para predecir la probabilidad de defunción con base en características de
+la persona como la edad, sexo y comorbilidades. Mediante el uso de técnicas de aprendizaje profundo se logra comprender la
+dinámica interna de los datos y ejecutar predicciones sin sesgos. El modelo generado, demostró ser estadísticamente más preciso
+que 5 algoritmos de machine learning bajo el test de McNemar, obteniendo una precisión promedio del 87.34 % σ= 0.04 para la 
+identificación de pacientes con riesgo en el lapso del 01 de agosto al 05 de septiembre del 2021..</p></pre>""", unsafe_allow_html = True)
 
 
     st.image("imgs/DescripcionFlujoNN.jpg")
