@@ -55,7 +55,8 @@ models_names, models_data = load_models()
 
 
 if page == "Introducción":
-    st.markdown("<pre><h3 style='text-align: center; color: black; font-family: verdana;'>A.A.E.S         A.A.F.O         A.G.F         C.J.A.G         J.E.R.S</h3></pre>", unsafe_allow_html=True)
+    #st.markdown("<pre><h3 style='text-align: center; color: black; font-family: verdana;'>A.A.E.S         A.A.F.O         A.G.F         C.J.A.G         J.E.R.S</h3></pre>", unsafe_allow_html=True)
+    st.markdown("<pre><h3 style='text-align: center; color: black; font-family: verdana;'>Adolfo Arana Espíritu Santo        Adrián Augusto Ferrer Orgaz         Abraham Gil Félix         Carlos de Jesús Ávila González         Jairo Enrique Ramírez Sánchez</h3></pre>", unsafe_allow_html=True)
     st.markdown("<hr><h1 style='text-align: center; color: black; font-family: verdana;'>Red Neuronal Multicapa para predecir la probabilidad de defunción en casos de COVID-19</h1>", unsafe_allow_html=True)
 
 
