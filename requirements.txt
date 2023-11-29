@@ -1,5 +1,5 @@
 numpy==1.19.2
 plotly==4.14.3
-streamlit==0.81.0
+Streamlit>=1.10.0 
 tensorflow==2.4.1
 click<=8.0.4
