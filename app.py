@@ -16,10 +16,11 @@ st.set_page_config(
 st.sidebar.header("Selecciona la página")
 page = st.sidebar.selectbox("Página:", ["Introducción", "Aplicación"])
 
-@st.cache(suppress_st_warning = True)
+@st.cache_data()
 def get_model():
     return K.models.load_model("Modelos/"+selected_model+".h5", {"custom_loss": custom_loss})
-    
+
+@K.saving.register_keras_serializable()
 def custom_loss(y_true, y_pred):
     loss = -(1/models_data[selected_model]["m"])*Kb.sum(5* y_true * Kb.log(Kb.abs(y_pred+1*10**-8))+ (1-y_true)*Kb.log(Kb.abs(1-y_pred+ 1*10**-8)))
     return loss
@@ -63,7 +64,7 @@ if page == "Introducción":
         
     st.markdown("""<pre><p style='text-align: center; color: black; font-family: verdana;'>
 Durante el transcurso de la pandemia de COVID-19, en México se han alcanzado altos niveles de ocupación hospitalaria,
-lo cual ha obligado a médicos de primera líınea a priorizar recursos, sin embargo, para llevar a cabo este proceso no existe
+lo cual ha obligado a médicos de primera línea a priorizar recursos, sin embargo, para llevar a cabo este proceso no existe
 un método sistemético más allá de la experiencia humana. A pesar de los avances en la vacunación, la aparición de nuevas
 variables como la Delta ha ocasionado un número elevado de contagios cuya tendencia cíclica se proyecta que continúe durante 
 el resto de 2021 y 2022. Actualmente existen herramientas para calcular el riesgo de mortalidad por COVID-19, sin embargo, una
@@ -88,7 +89,7 @@ elif page == "Aplicación":
                         "Embarazo", "Cardiovascular", "Renal Crónica",
                         "Tabaquismo", "Obesidad", "Hipertensión"]
     
-    col1, col2, col3 = st.beta_columns([0.25,0.15, 0.60])
+    col1, col2, col3 = st.columns([0.25,0.15, 0.60])
     
     with col1:
         st.markdown("<h2 style='text-align: center; color: black; font-family: verdana;'>Características del individuo</h2>", unsafe_allow_html=True)        
@@ -118,7 +119,7 @@ elif page == "Aplicación":
     
     st.text("Datos en uso desde 01 de marzo hasta el " + models_data[selected_model]['act']+ ", versión " + models_data[selected_model]['ver']+".")
 
-    col1, col2, col3 = st.beta_columns([0.35, 0.60, 0.25])
+    col1, col2, col3 = st.columns([0.35, 0.60, 0.25])
     
     with col2:
     
