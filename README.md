@@ -1,7 +1,7 @@
 # NN-COVID-19 APP
 
 ![Github language](https://img.shields.io/badge/language-python-blue)
-[![Generic badge](https://img.shields.io/badge/Streamlit%20App-up-gren.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Streamlit%20App-down-red.svg)](https://shields.io/)
 
 
 

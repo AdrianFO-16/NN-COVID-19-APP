@@ -53,6 +53,7 @@ def load_models():
 
 models_names, models_data = load_models()
 
+st.warning("Unfortunately, this app is not functional due to deprecated dependencies I have not been able nor have had the time to solve. Please, check the code in the repository.")
 
 if page == "Introducción":
     st.markdown("<pre><h3 style='text-align: center; color: black; font-family: verdana;'>A.A.E.S         A.A.F.O         A.G.F         C.J.A.G         J.E.R.S</h3></pre>", unsafe_allow_html=True)
