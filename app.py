@@ -18,7 +18,7 @@ page = st.sidebar.selectbox("Página:", ["Introducción", "Aplicación"])
 
 @st.cache_data()
 def get_model():
-    return K.models.load_model("Modelos/"+selected_model+".h5", {"custom_loss": custom_loss})
+    return K.models.load_model("Modelos/"+selected_model+".h5", {"custom_objects": custom_loss})
 
 def custom_loss(y_true, y_pred):
     loss = -(1/models_data[selected_model]["m"])*Kb.sum(5* y_true * Kb.log(Kb.abs(y_pred+1*10**-8))+ (1-y_true)*Kb.log(Kb.abs(1-y_pred+ 1*10**-8)))
