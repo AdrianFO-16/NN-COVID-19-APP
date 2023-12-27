@@ -20,7 +20,6 @@ page = st.sidebar.selectbox("Página:", ["Introducción", "Aplicación"])
 def get_model():
     return K.models.load_model("Modelos/"+selected_model+".h5", {"custom_loss": custom_loss})
 
-@K.saving.register_keras_serializable()
 def custom_loss(y_true, y_pred):
     loss = -(1/models_data[selected_model]["m"])*Kb.sum(5* y_true * Kb.log(Kb.abs(y_pred+1*10**-8))+ (1-y_true)*Kb.log(Kb.abs(1-y_pred+ 1*10**-8)))
     return loss
